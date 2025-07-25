@@ -11,7 +11,9 @@ public class Main {
         var isEmancipated = scanner.next().equalsIgnoreCase("S");
 
         var canDrive = (age >= 18) || (age >= 16 && isEmancipated);
-        var message = "";
+        var message = canDrive ?
+                name +", você pode dirigir." :
+                name +", você não pode dirigir.";
         if (canDrive) {
             message = name +", você pode dirigir.";
         } else {
