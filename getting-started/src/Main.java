@@ -5,14 +5,15 @@ public class Main {
         var scanner = new Scanner(System.in);
         System.out.println("Informe um número de 1 a 7: ");
         var option = scanner.nextInt();
-        switch (option) {
-            case 1, 7  -> System.out.println("Fim de Semana");
-            case 2  -> System.out.println("Segunda");
-            case 3  -> System.out.println("Terça");
-            case 4  -> System.out.println("Quarta");
-            case 5  -> System.out.println("Quinta");
-            case 6  -> System.out.println("Sexta");
-            default -> System.out.println("Opção Invalida");
-        }
+        var message = switch (option) {
+            case 1, 7  -> "Fim de Semana";
+            case 2  -> "Segunda";
+            case 3  -> "Terça";
+            case 4  -> "Quarta";
+            case 5  -> "Quinta";
+            case 6  -> "Sexta";
+            default -> "Opção Invalida";
+        };
+        System.out.println(message);
     }
 }
