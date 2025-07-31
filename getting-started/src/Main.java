@@ -14,11 +14,11 @@ public class Main {
         var message = canDrive ?
                 name +", você pode dirigir." :
                 name +", você não pode dirigir.";
-        if (canDrive) {
+        /*if (canDrive) {
             message = name +", você pode dirigir.";
         } else {
             message = name +", você não pode dirigir.";
-        }
+        }*/
 
         System.out.println(message);
     }
