@@ -3,23 +3,32 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         var scanner = new Scanner(System.in);
-        System.out.print("Informe seu nome: ");
-        var name = scanner.next();
-        System.out.print("Informe sua idade: ");
-        var age = scanner.nextInt();
-        System.out.print("Você é emancipado? (S/N): ");
-        var isEmancipated = scanner.next().equalsIgnoreCase("S");
-
-        var canDrive = (age >= 18) || (age >= 16 && isEmancipated);
-        var message = canDrive ?
-                name +", você pode dirigir." :
-                name +", você não pode dirigir.";
-        /*if (canDrive) {
-            message = name +", você pode dirigir.";
-        } else {
-            message = name +", você não pode dirigir.";
-        }*/
-
-        System.out.println(message);
+        System.out.println("Informe um número de 1 a 7: ");
+        var option = scanner.nextInt();
+        switch (option) {
+            case 1:
+                System.out.println("Domingo");
+                break;
+            case 2:
+                System.out.println("Segunda");
+                break;
+            case 3:
+                System.out.println("Terça");
+                break;
+            case 4:
+                System.out.println("Quarta");
+                break;
+            case 5:
+                System.out.println("Quinta");
+                break;
+            case 6:
+                System.out.println("Sexta");
+                break;
+            case 7:
+                System.out.println("Sábado");
+                break;
+            default:
+                System.out.println("Opção Invalida");
+        }
     }
 }
